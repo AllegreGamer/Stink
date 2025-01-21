@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: fd12ebed7c5d433c9046972e26e16190
+timeCreated: 1607623209
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Conditions/Collection/Physics/ConditionPhysicsIsSleeping.cs
+  uploadId: 701346

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a032dcd01ac0e476b956b7ab2fe946d7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291968
+  packageName: Shooter 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.3
+  assetPath: Assets/Plugins/GameCreator/Packages/Shooter/Runtime/Animations/Weapon@ReloadDry.anim
+  uploadId: 701344

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: fce08da7a8294e6bb7fe57966ff86493
+timeCreated: 1615665297
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Variables/Polymorphism/Properties/Get/Sprite/GetSpriteLocalName.cs
+  uploadId: 701346

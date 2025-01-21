@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: e1a588d0b1d44e7eabc442d62ad88bdf
+timeCreated: 1729160475
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291968
+  packageName: Shooter 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.3
+  assetPath: Assets/Plugins/GameCreator/Packages/Shooter/Runtime/VisualScripting/Conditions/ConditionShooterHasEquipped.cs
+  uploadId: 701344

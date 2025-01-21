@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: b75d956f288448609b85c09e0d962027
+timeCreated: 1687767931
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Runtime/Nodes/StateMachine/Ports/InputPortStateMachineSingle.cs
+  uploadId: 701379

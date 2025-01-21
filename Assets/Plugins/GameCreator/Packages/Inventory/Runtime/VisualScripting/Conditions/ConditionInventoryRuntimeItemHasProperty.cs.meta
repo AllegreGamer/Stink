@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 1deaed8834e341b48c819817bc01a332
+timeCreated: 1656404838
+AssetOrigin:
+  serializedVersion: 1
+  productId: 208668
+  packageName: Inventory 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.8.19
+  assetPath: Assets/Plugins/GameCreator/Packages/Inventory/Runtime/VisualScripting/Conditions/ConditionInventoryRuntimeItemHasProperty.cs
+  uploadId: 701350

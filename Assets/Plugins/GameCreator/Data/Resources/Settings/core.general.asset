@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da354c80beb46ca8db111f47d23382d, type: 3}
+  m_Name: core.general
+  m_EditorClassIdentifier: 
+  m_Repository:
+    rid: 7754311353397674187
+  references:
+    version: 2
+    RefIds:
+    - rid: 7754311353397674187
+      type: {class: GeneralRepository, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data:
+        m_Save:
+          m_Encryption:
+            rid: 7754311353397674188
+          m_Storage:
+            rid: 7754311353397674189
+          m_Load: 0
+          m_Scene:
+            m_Property:
+              rid: 7754311353397674190
+        m_Audio:
+          soundEffectsMixer: {fileID: -7484154009149603311, guid: 9101f2e01a95b7643b0a894b3fa42e7c,
+            type: 2}
+          ambientMixer: {fileID: -2200648412024424103, guid: 9101f2e01a95b7643b0a894b3fa42e7c,
+            type: 2}
+          musicMixer: {fileID: -7829364316420558265, guid: 9101f2e01a95b7643b0a894b3fa42e7c,
+            type: 2}
+          speechMixer: {fileID: -7437408960025223689, guid: 9101f2e01a95b7643b0a894b3fa42e7c,
+            type: 2}
+          userInterfaceMixer: {fileID: 1088252904258096366, guid: 9101f2e01a95b7643b0a894b3fa42e7c,
+            type: 2}
+    - rid: 7754311353397674188
+      type: {class: EncryptionNone, ns: GameCreator.Runtime.Common.SaveSystem, asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7754311353397674189
+      type: {class: StoragePlayerPrefs, ns: GameCreator.Runtime.Common.SaveSystem,
+        asm: GameCreator.Runtime.Core}
+      data: 
+    - rid: 7754311353397674190
+      type: {class: GetSceneActive, ns: GameCreator.Runtime.Common, asm: GameCreator.Runtime.Core}
+      data: 

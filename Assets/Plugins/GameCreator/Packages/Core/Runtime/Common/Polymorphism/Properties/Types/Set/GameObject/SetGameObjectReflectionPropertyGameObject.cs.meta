@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: d54ddfdf1d62458cb5dd8e29674a3361
+timeCreated: 1632293847
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Common/Polymorphism/Properties/Types/Set/GameObject/SetGameObjectReflectionPropertyGameObject.cs
+  uploadId: 701346

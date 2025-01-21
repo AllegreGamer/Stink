@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 3c6c4febb8e7424aa57554681c2328b1
+timeCreated: 1688368399
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Runtime/Nodes/ActionPlan/Ports/InputPortActionPlanPreConditions.cs
+  uploadId: 701379

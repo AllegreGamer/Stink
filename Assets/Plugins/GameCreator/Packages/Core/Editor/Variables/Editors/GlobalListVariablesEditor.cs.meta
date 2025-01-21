@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: e1c66fca174541f681447c0ead11dd49
+timeCreated: 1607884949
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Variables/Editors/GlobalListVariablesEditor.cs
+  uploadId: 701346

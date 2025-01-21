@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: a7916d05f4ae4f0dbaea3cf5ec4ae296
+timeCreated: 1607357424
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Instructions/Collection/Common/Logic/InstructionLogicBroadcastMessage.cs
+  uploadId: 701346

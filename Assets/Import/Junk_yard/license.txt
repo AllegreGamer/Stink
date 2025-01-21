@@ -1,0 +1,11 @@
+Model Information:
+* title:	Junk yard
+* source:	https://sketchfab.com/3d-models/junk-yard-133d9be95d8241c9b529be895244b38d
+* author:	zaidi40621 (https://sketchfab.com/xaidi40621)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Junk yard" (https://sketchfab.com/3d-models/junk-yard-133d9be95d8241c9b529be895244b38d) by zaidi40621 (https://sketchfab.com/xaidi40621) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

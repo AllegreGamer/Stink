@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 0867bbaa5bea43a38e87b8cf79c04981
+timeCreated: 1713967241
+AssetOrigin:
+  serializedVersion: 1
+  productId: 291968
+  packageName: Shooter 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.3
+  assetPath: Assets/Plugins/GameCreator/Packages/Shooter/Runtime/Classes/Rigs/Human/HumanIK.cs
+  uploadId: 701344

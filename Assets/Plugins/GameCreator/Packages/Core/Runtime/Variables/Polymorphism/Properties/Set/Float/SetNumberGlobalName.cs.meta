@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 09b7792e12364fd5882ef82cff12dae9
+timeCreated: 1605725083
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Variables/Polymorphism/Properties/Set/Float/SetNumberGlobalName.cs
+  uploadId: 701346

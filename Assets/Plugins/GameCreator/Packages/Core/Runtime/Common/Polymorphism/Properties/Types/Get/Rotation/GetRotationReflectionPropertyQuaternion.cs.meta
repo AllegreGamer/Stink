@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 55dbacde786e4915a7ac3d36bf9bc557
+timeCreated: 1632293306
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Common/Polymorphism/Properties/Types/Get/Rotation/GetRotationReflectionPropertyQuaternion.cs
+  uploadId: 701346

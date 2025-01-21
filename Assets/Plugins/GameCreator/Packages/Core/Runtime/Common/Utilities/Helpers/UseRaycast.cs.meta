@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 992f7a0c7d8f4ec5b806d27fc1bda52f
+timeCreated: 1638268206
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Common/Utilities/Helpers/UseRaycast.cs
+  uploadId: 701346

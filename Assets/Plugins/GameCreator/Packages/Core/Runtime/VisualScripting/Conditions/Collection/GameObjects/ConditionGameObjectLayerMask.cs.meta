@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 1c4af831edbd4c208ae785f36b7f0ed8
+timeCreated: 1607620870
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Conditions/Collection/GameObjects/ConditionGameObjectLayerMask.cs
+  uploadId: 701346

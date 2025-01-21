@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: fe3662fa2a31432e839d193a371e9347
+timeCreated: 1687768906
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Editor/Drawers/StateMachine/NodeStateMachineConditionsDrawer.cs
+  uploadId: 701379

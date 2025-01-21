@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 5e7a654d130c4ad2b2ecb5c002ba44e7
+timeCreated: 1603730939
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Instructions/Collection/Common/Audio/InstructionCommonAudioVolumeUI.cs
+  uploadId: 701346

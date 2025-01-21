@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 615a027bb6104c0f8910b4369e85bb05
+timeCreated: 1610020678
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Common/Utilities/Helpers/Box/TBoxDrawer.cs
+  uploadId: 701346

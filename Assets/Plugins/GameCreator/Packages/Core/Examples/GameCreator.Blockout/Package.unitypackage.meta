@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c8313db9adfa846ff804254e7539e801
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Examples/GameCreator.Blockout/Package.unitypackage
+  uploadId: 701346

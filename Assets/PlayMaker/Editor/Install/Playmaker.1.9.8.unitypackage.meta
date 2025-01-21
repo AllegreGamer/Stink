@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bc59d05a08a00e24a944cfbc8bf2ce5f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 368
+  packageName: Playmaker
+  packageVersion: 1.9.8
+  assetPath: Assets/PlayMaker/Editor/Install/Playmaker.1.9.8.unitypackage
+  uploadId: 636437

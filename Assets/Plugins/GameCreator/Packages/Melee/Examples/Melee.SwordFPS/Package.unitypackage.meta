@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ee0df0e61b994e0e81fd237a9c85f0f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253446
+  packageName: Melee 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.2.11
+  assetPath: Assets/Plugins/GameCreator/Packages/Melee/Examples/Melee.SwordFPS/Package.unitypackage
+  uploadId: 701376

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 36c323ac69a34b9a8ad71d70091581a7
+timeCreated: 1607704821
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Events/Collection/Lifecycle/EventOnInterval.cs
+  uploadId: 701346

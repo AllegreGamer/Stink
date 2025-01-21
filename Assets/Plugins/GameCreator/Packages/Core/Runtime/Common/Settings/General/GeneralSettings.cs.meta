@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 0da354c80beb46ca8db111f47d23382d
+timeCreated: 1603906912
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Common/Settings/General/GeneralSettings.cs
+  uploadId: 701346

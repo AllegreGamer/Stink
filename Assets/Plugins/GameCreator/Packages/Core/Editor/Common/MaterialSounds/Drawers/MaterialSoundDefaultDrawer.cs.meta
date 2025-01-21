@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 4db27e5c94be47418b79aab4482cbd90
+timeCreated: 1605092466
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Common/MaterialSounds/Drawers/MaterialSoundDefaultDrawer.cs
+  uploadId: 701346

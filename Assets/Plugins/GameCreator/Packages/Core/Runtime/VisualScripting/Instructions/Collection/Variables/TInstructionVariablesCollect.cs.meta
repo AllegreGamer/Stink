@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 62f02ea0671341c3a42beb6141d42ad2
+timeCreated: 1608728429
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Instructions/Collection/Variables/TInstructionVariablesCollect.cs
+  uploadId: 701346

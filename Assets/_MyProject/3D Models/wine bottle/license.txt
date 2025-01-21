@@ -1,0 +1,11 @@
+Model Information:
+* title:	Champagne Bottle
+* source:	https://sketchfab.com/3d-models/champagne-bottle-1ce8a43374bf4057b757dc635351042b
+* author:	ethan_garden (https://sketchfab.com/ethan_garden)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Champagne Bottle" (https://sketchfab.com/3d-models/champagne-bottle-1ce8a43374bf4057b757dc635351042b) by ethan_garden (https://sketchfab.com/ethan_garden) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

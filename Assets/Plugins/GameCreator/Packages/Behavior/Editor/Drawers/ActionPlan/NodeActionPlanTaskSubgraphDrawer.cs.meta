@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d186d9c6becf4681ac0e95f87ff010cc
+timeCreated: 1688566574
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Editor/Drawers/ActionPlan/NodeActionPlanTaskSubgraphDrawer.cs
+  uploadId: 701379

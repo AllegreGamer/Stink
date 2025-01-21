@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 48216a1cf70f9444287913f5d00d1247
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Examples/Behavior.StateMachine/Behavior.StateMachine.asset
+  uploadId: 701379

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: e41f343cf92c4693ace5c0100dfe1141
+timeCreated: 1638261444
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Characters/Features/Interaction/InteractionModeDrawer.cs
+  uploadId: 701346

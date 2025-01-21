@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: dd2577848afd4ceda573d475ae323a62
+timeCreated: 1708523507
+AssetOrigin:
+  serializedVersion: 1
+  productId: 206959
+  packageName: Stats 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.6.18
+  assetPath: Assets/Plugins/GameCreator/Packages/Stats/Runtime/Classes/Properties/Fields/Get/PropertyGetStat.cs
+  uploadId: 701361

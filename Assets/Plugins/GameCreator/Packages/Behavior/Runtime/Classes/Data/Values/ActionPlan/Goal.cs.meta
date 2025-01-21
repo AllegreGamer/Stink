@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: d87e0ed8585f40dd8076987da5665627
+timeCreated: 1688650444
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Runtime/Classes/Data/Values/ActionPlan/Goal.cs
+  uploadId: 701379

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 1b8d4dbb07b441f2b6f2b3d3d474595b
+timeCreated: 1608290325
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Common/Utilities/Helpers/ID/IdPathStringDrawer.cs
+  uploadId: 701346

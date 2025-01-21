@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 7e54b1d858b546b69a9ce23cc6aa78ee
+timeCreated: 1600271199
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Common/Polymorphism/Properties/Fields/Get/PropertyGetInteger.cs
+  uploadId: 701346

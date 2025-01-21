@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 651bb667a1fe48b4b21395d918b030a9
+timeCreated: 1607856398
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/Variables/Classes/Values/ValueTexture.cs
+  uploadId: 701346

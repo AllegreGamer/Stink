@@ -1,0 +1,11 @@
+Model Information:
+* title:	Abandend Warhouse
+* source:	https://sketchfab.com/3d-models/abandend-warhouse-71e8be984aed4844bd4e08396a018f47
+* author:	aidan9lives (https://sketchfab.com/aidan9lives)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Abandend Warhouse" (https://sketchfab.com/3d-models/abandend-warhouse-71e8be984aed4844bd4e08396a018f47) by aidan9lives (https://sketchfab.com/aidan9lives) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

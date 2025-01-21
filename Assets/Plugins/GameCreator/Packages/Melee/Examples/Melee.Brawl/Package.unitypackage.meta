@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dc0268129e72143ddbdbc4cffe262b1e
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 253446
+  packageName: Melee 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.2.11
+  assetPath: Assets/Plugins/GameCreator/Packages/Melee/Examples/Melee.Brawl/Package.unitypackage
+  uploadId: 701376

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 12395194c1dc415080f90808d770165b
+timeCreated: 1689519666
+AssetOrigin:
+  serializedVersion: 1
+  productId: 262851
+  packageName: Behavior 2 | Game Creator 2 by Catsoft Works
+  packageVersion: 2.1.6
+  assetPath: Assets/Plugins/GameCreator/Packages/Behavior/Runtime/Nodes/UtilityBoard/NodeUtilityBoardRoot.cs
+  uploadId: 701379

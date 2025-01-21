@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 872bb33bb1434402ac96a7823a4022d1
+timeCreated: 1615283102
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Editor/Common/UI/Templates/LabelTitle.cs
+  uploadId: 701346

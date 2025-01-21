@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: cc35e48ef4d940b7b7d238e760cef9d1
+timeCreated: 1608801774
+AssetOrigin:
+  serializedVersion: 1
+  productId: 203069
+  packageName: Game Creator 2
+  packageVersion: 2.17.51
+  assetPath: Assets/Plugins/GameCreator/Packages/Core/Runtime/VisualScripting/Instructions/Collection/Variables/InstructionVariablesFilter.cs
+  uploadId: 701346
