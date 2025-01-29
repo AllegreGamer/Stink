@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chest - Bau
+* source:	https://sketchfab.com/3d-models/chest-bau-c338aff05a344678817cbd1ffa984932
+* author:	profhugo.zion (https://sketchfab.com/profhugo.zion)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chest - Bau" (https://sketchfab.com/3d-models/chest-bau-c338aff05a344678817cbd1ffa984932) by profhugo.zion (https://sketchfab.com/profhugo.zion) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

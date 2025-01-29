@@ -16,6 +16,7 @@ public class BurpAttack : MonoBehaviour
     [SerializeField] private float burpCost = 20f;  // Aggiunto il costo del burp
 
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isInitialized;
 
     private void OnEnable()
@@ -28,6 +29,7 @@ public class BurpAttack : MonoBehaviour
         if (!isInitialized)
         {
             resourceManager = GetComponentInParent<ResourceManager>();
+            powerUpManager = GetComponentInParent<PowerUpManager>();
 
             // Trova l'AttackManager nel parent o nei siblings
             if (attackManager == null)
@@ -50,7 +52,7 @@ public class BurpAttack : MonoBehaviour
             {
                 spawnPoint = transform;
             }
-
+            
             isInitialized = true;
             Debug.Log("BurpAttack initialized successfully!");
         }
@@ -90,10 +92,14 @@ public class BurpAttack : MonoBehaviour
         {
             GameObject burpAura = Instantiate(burpAuraPrefab, spawnPoint.position, Quaternion.identity);
             BurpAura auraComponent = burpAura.GetComponent<BurpAura>();
-
             if (auraComponent != null)
             {
-                auraComponent.Initialize(baseDamage, auraRadius);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                auraComponent.Initialize(finalDamage, auraRadius);
             }
             else
             {

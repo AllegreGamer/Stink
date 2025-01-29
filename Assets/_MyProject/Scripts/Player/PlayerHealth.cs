@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using GameCreator.Runtime.Characters;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private bool enableInvulnerabilityOnDamage = false;
     private bool isInvulnerable = false;
 
+    [Header("Death Settings")]
+    [SerializeField] private float deathToGameOverDelay = 2f; // Delay before showing game over screen
+    private bool isDead = false;
+    private Character character; // GameCreator Character reference
+
     [Header("Debug")]
     [SerializeField] private bool showDebugLogs = true;
 
@@ -42,6 +48,16 @@ public class PlayerHealth : MonoBehaviour
             this.value = value;
             this.duration = duration;
             this.source = source;
+        }
+    }
+
+    private void Awake()
+    {
+        // Get GameCreator Character component
+        character = GetComponent<Character>();
+        if (character == null)
+        {
+            Debug.LogError("Character component not found in PlayerHealth!");
         }
     }
 
@@ -125,14 +141,18 @@ public class PlayerHealth : MonoBehaviour
         for (int i = armorModifiers.Count - 1; i >= 0; i--)
         {
             var mod = armorModifiers[i];
-            mod.duration -= Time.deltaTime;
-
-            if (mod.duration <= 0)
+            // Aggiungi controllo per durata -1 (permanente)
+            if (mod.duration > 0)  // Solo se la durata è positiva
             {
-                armorModifiers.RemoveAt(i);
-                if (showDebugLogs)
+                mod.duration -= Time.deltaTime;
+
+                if (mod.duration <= 0)
                 {
-                    Debug.Log($"Armor modifier from {mod.source} expired");
+                    armorModifiers.RemoveAt(i);
+                    if (showDebugLogs)
+                    {
+                        Debug.Log($"Armor modifier from {mod.source} expired");
+                    }
                 }
             }
         }
@@ -146,6 +166,11 @@ public class PlayerHealth : MonoBehaviour
         {
             currentArmor += mod.value;
         }
+    }
+    public void RemoveArmorModifier(string source)
+    {
+        armorModifiers.RemoveAll(mod => mod.source == source);
+        RecalculateArmor();
     }
 
     private float CalculateDamageReduction()
@@ -259,15 +284,46 @@ public class PlayerHealth : MonoBehaviour
     public event System.Action OnDeath;
     #endregion
 
-    private void Die()
+    private async void Die()
     {
+        if (isDead) return;
+        isDead = true;
+
         if (showDebugLogs)
         {
             Debug.Log("Player died!");
         }
 
+        // Disable player input and movement
+        if (character != null)
+        {
+            // Set IsDead property on Character
+            character.IsDead = true;
+
+            // Enable ragdoll
+            await character.Ragdoll.StartRagdoll();
+        }
+
+        // Invoke death event
         OnDeath?.Invoke();
-        // Implementa qui la logica di morte
+
+        // Start coroutine for delayed game over screen
+        StartCoroutine(ShowGameOverAfterDelay());
+    }
+    private IEnumerator ShowGameOverAfterDelay()
+    {
+        // Wait for specified delay
+        yield return new WaitForSeconds(deathToGameOverDelay);
+
+        // Show game over screen using UIManager
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ShowGameOver();
+        }
+        else
+        {
+            Debug.LogError("UIManager instance not found!");
+        }
     }
 
     #region Getters

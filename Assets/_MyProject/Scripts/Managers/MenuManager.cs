@@ -1,49 +1,83 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;  // Per Button
-using UnityEngine.EventSystems;  // Per EventSystem
-using System.Collections;  // Per IEnumerator
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class MenuManager : MonoBehaviour
 {
-    // Definizione costanti per gli indici delle scene
     private const int MENU_SCENE_INDEX = 0;
     private const int GAME_SCENE_INDEX = 1;
+    private const string TOTAL_FRAGMENTS_KEY = "TotalGrudgeFragments";
 
+    [Header("UI Panels")]
+    [SerializeField] private GameObject buttonPanel;
     [SerializeField] private GameObject instructionsPanel;
-    [SerializeField] private Button firstSelectedButton; // Il pulsante Start Game
-    [SerializeField] private Button firstSelectedInstructions; // Il pulsante "Got It" nel pannello istruzioni
+    [SerializeField] private GameObject shopPanel;
+
+    [Header("UI Elements")]
+    [SerializeField] private Button firstSelectedButton;
+    [SerializeField] private Button firstSelectedInstructions;
+    [SerializeField] private Button firstSelectedShop;
+    [SerializeField] private TextMeshProUGUI totalFragmentsText;
+    [SerializeField] private Button shopButton;
+
+    private void Awake()
+    {
+        if (shopButton != null)
+        {
+            shopButton.gameObject.SetActive(true);
+        }
+    }
 
     private void Start()
     {
-        if (instructionsPanel != null)
-        {
-            instructionsPanel.SetActive(false);
-        }
-        // Seleziona il primo pulsante all'avvio
+        InitializePanels();
+        UpdateFragmentCounter();
         SetInitialSelection(firstSelectedButton);
+    }
+
+    private void InitializePanels()
+    {
+        buttonPanel?.SetActive(true);
+        instructionsPanel?.SetActive(false);
+        shopPanel?.SetActive(false);
+
+        if (shopButton != null)
+        {
+            shopButton.gameObject.SetActive(true);
+        }
     }
 
     private void OnEnable()
     {
-        // Riseleziona il pulsante quando il menu diventa attivo
         SetInitialSelection(firstSelectedButton);
+        if (shopButton != null)
+        {
+            shopButton.gameObject.SetActive(true);
+        }
+    }
+
+    private void UpdateFragmentCounter()
+    {
+        if (totalFragmentsText != null)
+        {
+            int total = PlayerPrefs.GetInt(TOTAL_FRAGMENTS_KEY, 0);
+            totalFragmentsText.text = $"GrudgeFragments: {total}";
+        }
     }
 
     private void SetInitialSelection(Button button)
     {
         if (button == null || EventSystem.current == null) return;
-
-        // Deseleziona qualsiasi elemento UI attualmente selezionato
         EventSystem.current.SetSelectedGameObject(null);
-        // Breve delay per assicurarsi che la deseleziona sia completata
         StartCoroutine(SelectButtonNextFrame(button));
     }
 
     private IEnumerator SelectButtonNextFrame(Button button)
     {
         yield return new WaitForEndOfFrame();
-        // Seleziona il pulsante specificato
         if (EventSystem.current != null && button != null)
         {
             EventSystem.current.SetSelectedGameObject(button.gameObject);
@@ -57,21 +91,30 @@ public class MenuManager : MonoBehaviour
 
     public void ShowInstructions()
     {
-        if (instructionsPanel != null)
-        {
-            instructionsPanel.SetActive(true);
-            // Seleziona il primo pulsante nel pannello istruzioni
-            SetInitialSelection(firstSelectedInstructions);
-        }
+        buttonPanel?.SetActive(false);
+        instructionsPanel?.SetActive(true);
+        SetInitialSelection(firstSelectedInstructions);
     }
 
     public void HideInstructions()
     {
-        if (instructionsPanel != null)
-        {
-            instructionsPanel.SetActive(false);
-            // Ritorna al menu principale e seleziona il primo pulsante
-            SetInitialSelection(firstSelectedButton);
-        }
+        instructionsPanel?.SetActive(false);
+        buttonPanel?.SetActive(true);
+        SetInitialSelection(firstSelectedButton);
+    }
+
+    public void ShowShop()
+    {
+        buttonPanel?.SetActive(false);
+        shopPanel?.SetActive(true);
+        SetInitialSelection(firstSelectedShop);
+        UpdateFragmentCounter();
+    }
+
+    public void HideShop()
+    {
+        shopPanel?.SetActive(false);
+        buttonPanel?.SetActive(true);
+        SetInitialSelection(firstSelectedButton);
     }
 }

@@ -18,6 +18,7 @@ public class VomitAttack : MonoBehaviour
     [SerializeField] private float alcoholCost = 15f;
 
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isInitialized;
     private float nextAttackTime;
 
@@ -31,6 +32,7 @@ public class VomitAttack : MonoBehaviour
         if (!isInitialized)
         {
             resourceManager = GetComponentInParent<ResourceManager>();
+            powerUpManager = GetComponentInParent<PowerUpManager>();
 
             if (attackManager == null)
             {
@@ -94,7 +96,12 @@ public class VomitAttack : MonoBehaviour
 
             if (areaComponent != null)
             {
-                areaComponent.Initialize(baseDamage, attackRadius);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                areaComponent.Initialize(finalDamage, attackRadius);
             }
             else
             {

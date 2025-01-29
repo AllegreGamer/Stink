@@ -24,6 +24,7 @@ public class ShitAttack : MonoBehaviour
     [SerializeField] private bool showDebugGizmos = true;
 
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isActive = true;
     private float nextAttackTime;
 
@@ -35,6 +36,7 @@ public class ShitAttack : MonoBehaviour
     private void InitializeComponents()
     {
         resourceManager = GetComponentInParent<ResourceManager>();
+        powerUpManager = GetComponentInParent<PowerUpManager>();
 
         if (attackManager == null)
         {
@@ -101,7 +103,12 @@ public class ShitAttack : MonoBehaviour
 
             if (rb != null && shitProjectile != null)
             {
-                shitProjectile.SetDamage(baseDamage);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                shitProjectile.SetDamage(finalDamage);
                 shitProjectile.SetExplosionRadius(explosionRadius);
 
                 Vector3 throwForce = (shootPoint.forward * shootForce) + (Vector3.up * upwardForce);

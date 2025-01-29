@@ -28,6 +28,7 @@ public class SpitAttack : MonoBehaviour
     [SerializeField] private float maxForce = 25f;          // Forza con carica massima
     [SerializeField] private float upwardForce = 0.1f;
 
+    private PowerUpManager powerUpManager;
     private float chargeStartTime;
     private bool isCharging;
 
@@ -36,6 +37,7 @@ public class SpitAttack : MonoBehaviour
         InitializeComponents();
         if (chargeIndicator != null)
         {
+            powerUpManager = GetComponentInParent<PowerUpManager>();
             chargeIndicator.SetActive(false);  // Nascondi l'indicatore all'inizio
         }
     }
@@ -134,6 +136,12 @@ public class SpitAttack : MonoBehaviour
         float spreadAngle = Mathf.Lerp(minSpread, maxSpread, chargeProgress);
         float force = Mathf.Lerp(minForce, maxForce, chargeProgress);
 
+        float finalDamage = currentDamage;
+        if (powerUpManager != null)
+        {
+            finalDamage *= powerUpManager.GetDamageMultiplier();
+        }
+
         for (int i = 0; i < projectileCount; i++)
         {
             float angleStep = spreadAngle / (projectileCount - 1);
@@ -142,13 +150,12 @@ public class SpitAttack : MonoBehaviour
 
             GameObject projectile = Instantiate(spitPrefab, shootPoint.position, shootPoint.rotation);
             projectile.transform.Rotate(Vector3.up, currentAngle);
-
             SpitProjectile spitProjectile = projectile.GetComponent<SpitProjectile>();
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
             if (spitProjectile != null && rb != null)
             {
-                spitProjectile.SetDamage(currentDamage);
+                spitProjectile.SetDamage(finalDamage);
                 Vector3 directionWithSpread = Quaternion.Euler(0, currentAngle, 0) * shootPoint.forward;
                 Vector3 throwForce = (directionWithSpread * force) + (Vector3.up * upwardForce);
                 rb.AddForce(throwForce, ForceMode.Impulse);

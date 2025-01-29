@@ -19,6 +19,7 @@ public class StinkAttack : MonoBehaviour
     private bool isActive;
     private bool isInitialized;
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
 
     private void OnEnable()
     {
@@ -30,6 +31,7 @@ public class StinkAttack : MonoBehaviour
         if (!isInitialized)
         {
             resourceManager = GetComponentInParent<ResourceManager>();
+            powerUpManager = GetComponentInParent<PowerUpManager>();
 
             // Trova l'AttackManager nel parent o nei siblings
             Transform interactionsTransform = transform.parent;
@@ -80,10 +82,14 @@ public class StinkAttack : MonoBehaviour
             isActive = true;
             currentCloud = Instantiate(stinkCloudPrefab, spawnPoint.position, Quaternion.identity, spawnPoint);
             StinkCloud cloudComponent = currentCloud.GetComponent<StinkCloud>();
-
             if (cloudComponent != null)
             {
-                cloudComponent.Initialize(baseDamage, duration, auraRadius);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                cloudComponent.Initialize(finalDamage, duration, auraRadius);
                 cloudComponent.OnCloudDestroyed += OnCloudDestroyed;
             }
             else

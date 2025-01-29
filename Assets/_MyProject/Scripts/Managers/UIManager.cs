@@ -1,6 +1,9 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,9 +13,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
 
     [Header("Buttons")]
-    [SerializeField] private Button gameOverRestartButton;    // Restart nel pannello Game Over
-    [SerializeField] private Button gameCompleteRestartButton; // Restart nel pannello Game Complete
-    [SerializeField] private Button resumeButton;             // Resume nel pannello Pause
+    [SerializeField] private Button gameOverRestartButton;
+    [SerializeField] private Button gameCompleteRestartButton;
+    [SerializeField] private Button resumeButton;
+    [SerializeField] private Button gameOverQuitButton;
+    [SerializeField] private Button gameCompleteQuitButton;
+    [SerializeField] private Button pauseQuitButton;
+
+    [Header("First Selected Buttons")]
+    [SerializeField] private Button firstSelectedGameOver;
+    [SerializeField] private Button firstSelectedGameComplete;
+    [SerializeField] private Button firstSelectedPause;
 
     private static UIManager instance;
     public static UIManager Instance => instance;
@@ -24,41 +35,73 @@ public class UIManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        // Nascondi tutti i pannelli all'inizio
-        gameOverPanel.SetActive(false);
-        gameCompletePanel.SetActive(false);
-        pausePanel.SetActive(false);
+        InitializePanels();
+    }
+
+    private void InitializePanels()
+    {
+        gameOverPanel?.SetActive(false);
+        gameCompletePanel?.SetActive(false);
+        pausePanel?.SetActive(false);
     }
 
     private void Start()
     {
-        // Setup dei pulsanti
+        SetupButtons();
+    }
+
+    private void SetupButtons()
+    {
         if (gameOverRestartButton != null)
             gameOverRestartButton.onClick.AddListener(OnRestartClick);
-
         if (gameCompleteRestartButton != null)
             gameCompleteRestartButton.onClick.AddListener(OnRestartClick);
-
         if (resumeButton != null)
             resumeButton.onClick.AddListener(OnResumeClick);
+
+        if (gameOverQuitButton != null)
+            gameOverQuitButton.onClick.AddListener(OnQuitClick);
+        if (gameCompleteQuitButton != null)
+            gameCompleteQuitButton.onClick.AddListener(OnQuitClick);
+        if (pauseQuitButton != null)
+            pauseQuitButton.onClick.AddListener(OnQuitClick);
+    }
+
+    private void SetInitialSelection(Button button)
+    {
+        if (button == null || EventSystem.current == null) return;
+        EventSystem.current.SetSelectedGameObject(null);
+        StartCoroutine(SelectButtonNextFrame(button));
+    }
+
+    private IEnumerator SelectButtonNextFrame(Button button)
+    {
+        yield return new WaitForEndOfFrame();
+        if (EventSystem.current != null && button != null)
+        {
+            EventSystem.current.SetSelectedGameObject(button.gameObject);
+        }
     }
 
     public void ShowGameOver()
     {
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
+        SetInitialSelection(firstSelectedGameOver);
     }
 
     public void ShowGameComplete()
     {
         gameCompletePanel.SetActive(true);
         Time.timeScale = 0f;
+        SetInitialSelection(firstSelectedGameComplete);
     }
 
     public void ShowPauseMenu()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
+        SetInitialSelection(firstSelectedPause);
     }
 
     public void HidePauseMenu()
@@ -70,13 +113,17 @@ public class UIManager : MonoBehaviour
     private void OnRestartClick()
     {
         Time.timeScale = 1f;
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
-        );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnResumeClick()
     {
         HidePauseMenu();
+    }
+
+    private void OnQuitClick()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0); // Torna al menu principale
     }
 }

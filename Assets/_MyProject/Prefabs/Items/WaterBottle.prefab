@@ -88,7 +88,7 @@ MonoBehaviour:
   unlockLevel: 3
   recoveryAmounts:
     healthRecovery: 0
-    urineRecovery: 500
+    urineRecovery: 750
     foodRecovery: 0
     alcoholRecovery: 0
     burpRecovery: 0

@@ -32,6 +32,7 @@ public class UrineShooter : MonoBehaviour
     private bool isShooting;
     private float currentTriggerValue;
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isActive = true;
 
     private void Start()
@@ -42,6 +43,7 @@ public class UrineShooter : MonoBehaviour
     private void InitializeComponents()
     {
         resourceManager = GetComponentInParent<ResourceManager>();
+        powerUpManager = GetComponentInParent<PowerUpManager>();
 
         // Se attackManager non è stato assegnato, cercalo nel parent
         if (attackManager == null)
@@ -157,26 +159,26 @@ public class UrineShooter : MonoBehaviour
     private void Shoot(float triggerValue)
     {
         float force = Mathf.Lerp(minForce, maxForce, triggerValue);
-
         float randomSpreadX = Random.Range(-currentSpread, currentSpread);
         float randomSpreadY = Random.Range(-currentSpread, currentSpread);
-
         GameObject projectile = Instantiate(urinePrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         UrineProjectile urineProjectile = projectile.GetComponent<UrineProjectile>();
-
         if (rb != null)
         {
             if (urineProjectile != null)
             {
-                urineProjectile.SetDamage(baseDamage);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                urineProjectile.SetDamage(finalDamage);
             }
-
             Vector3 direction = shootPoint.forward;
             direction = Quaternion.Euler(randomSpreadX, randomSpreadY, 0) * direction;
             Vector3 forceVector = (direction + Vector3.up * upwardForce).normalized * force;
             rb.AddForce(forceVector, ForceMode.Impulse);
-
             Debug.DrawRay(shootPoint.position, forceVector, Color.red, 1f);
         }
         else

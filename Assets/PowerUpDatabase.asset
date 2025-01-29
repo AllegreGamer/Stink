@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b525c9a6f952d642806f61d9eede842, type: 3}
+  m_Name: PowerUpDatabase
+  m_EditorClassIdentifier: 
+  powerUps:
+  - id: 1
+    name: Energy Drink
+    description: 'temporarily increase damage dealt '
+    cost: 100
+    icon: {fileID: 21300000, guid: cb76d645a4ead5b4ca604f53d4782936, type: 3}
+    prefab: {fileID: 7400504510879855902, guid: efbcf652b1c85fa4a8381a2be18c805c,
+      type: 3}
+    spawnProbability: 0.2
+    spawnFrequency: 30
+  - id: 2
+    name: Speed Boost
+    description: temporarily increase speed movement
+    cost: 100
+    icon: {fileID: 21300000, guid: 2cc0ca169d855d04d81121894301d452, type: 3}
+    prefab: {fileID: 7400504510879855902, guid: 0823ed029859b424b95ea152ab69d9f2,
+      type: 3}
+    spawnProbability: 0.2
+    spawnFrequency: 30
+  - id: 3
+    name: Inner Armor
+    description: reduce damage taken
+    cost: 100
+    icon: {fileID: 21300000, guid: 5ab985fcd38d9734c9386c3b64eb7be7, type: 3}
+    prefab: {fileID: 7400504510879855902, guid: 7047b1cc4896c0c4cbe781aeb66e65e5,
+      type: 3}
+    spawnProbability: 0.2
+    spawnFrequency: 30

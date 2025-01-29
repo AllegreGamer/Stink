@@ -27,6 +27,7 @@ public class DiarrheaAttack : MonoBehaviour
     private bool isShooting;
     private float currentTriggerValue;
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isActive = true;
 
     private void Start()
@@ -37,6 +38,7 @@ public class DiarrheaAttack : MonoBehaviour
     private void InitializeComponents()
     {
         resourceManager = GetComponentInParent<ResourceManager>();
+        powerUpManager = GetComponentInParent<PowerUpManager>();
 
         if (attackManager == null)
         {
@@ -161,12 +163,12 @@ public class DiarrheaAttack : MonoBehaviour
 
         if (rb != null && diarrheaProjectile != null)
         {
-            diarrheaProjectile.SetDamage(baseDamage * triggerValue);
-
-            // Forza di sparo verso il basso
-            float force = Mathf.Lerp(minShootForce, maxShootForce, triggerValue);
-            Vector3 shootDirection = -Vector3.up; // Spara verso il basso
-            rb.AddForce(shootDirection * force, ForceMode.Impulse);
+            float finalDamage = baseDamage * triggerValue;
+            if (powerUpManager != null)
+            {
+                finalDamage *= powerUpManager.GetDamageMultiplier();
+            }
+            diarrheaProjectile.SetDamage(finalDamage);
         }
         else
         {

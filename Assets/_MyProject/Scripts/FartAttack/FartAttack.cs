@@ -19,6 +19,7 @@ public class FartAttack : MonoBehaviour
     [SerializeField] private float fartCost = 20f;
 
     private ResourceManager resourceManager;
+    private PowerUpManager powerUpManager;
     private bool isActive = true;
     private bool isInitialized = false;
 
@@ -34,6 +35,7 @@ public class FartAttack : MonoBehaviour
         {
             // Get required components
             resourceManager = GetComponentInParent<ResourceManager>();
+            powerUpManager = GetComponentInParent<PowerUpManager>();
 
             // Se attackManager non è stato assegnato manualmente, cercalo
             if (attackManager == null)
@@ -115,18 +117,19 @@ public class FartAttack : MonoBehaviour
     private void SpawnGasCloud()
     {
         Debug.Log($"SpawnGasCloud called. GasCloudPrefab: {gasCloudPrefab != null}, SpawnPoint: {spawnPoint != null}");
-
         if (gasCloudPrefab != null && spawnPoint != null)
         {
             Vector3 spawnPosition = spawnPoint.position;
-            Debug.Log($"Spawning gas cloud at position: {spawnPosition}");
-
             GameObject gasCloud = Instantiate(gasCloudPrefab, spawnPosition, Quaternion.identity);
             GasCloud cloudComponent = gasCloud.GetComponent<GasCloud>();
-
             if (cloudComponent != null)
             {
-                cloudComponent.Initialize(baseDamage, gasCloudDuration, gasCloudRadius);
+                float finalDamage = baseDamage;
+                if (powerUpManager != null)
+                {
+                    finalDamage *= powerUpManager.GetDamageMultiplier();
+                }
+                cloudComponent.Initialize(finalDamage, gasCloudDuration, gasCloudRadius);
                 Debug.Log("Gas cloud initialized successfully!");
             }
             else
