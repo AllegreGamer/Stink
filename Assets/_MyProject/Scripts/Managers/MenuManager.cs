@@ -8,7 +8,8 @@ using System.Collections;
 public class MenuManager : MonoBehaviour
 {
     private const int MENU_SCENE_INDEX = 0;
-    private const int GAME_SCENE_INDEX = 1;
+    private const int OPENING_SCENE_INDEX = 1;
+    private const int GAME_SCENE_INDEX = 2;
     private const string TOTAL_FRAGMENTS_KEY = "TotalGrudgeFragments";
 
     [Header("UI Panels")]
@@ -86,7 +87,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(GAME_SCENE_INDEX);
+        SceneManager.LoadScene(OPENING_SCENE_INDEX);
     }
 
     public void ShowInstructions()
